@@ -157,13 +157,22 @@ def main(fileURL, saveFile ,nt):
 if __name__ == '__main__':
     # main()
     # initilize thread 1 for array1Calc function
-    s = r'/Users/hayoom/Downloads/config.yaml'
+    s = r'/Users/hayoom/Downloads/config_project2/config.yaml'
     s2= r'/Users/hayoom/Downloads/config2.yaml'
-    # s2 =
+    # s3 = ''
+    # s2 = r'‎/Desktop/project2/config6.yaml'
+    # s3 = r'/Users/hayoom/Downloads/config_project2/config3.yaml'
+    # error in s3 path !!!
     n1='b26v89c19zqg8o3fosbv32ymkum6e5c1cyq6g4egpy8ot'
-    main(s,"tweet1.csv",n1,)
+
+    nn = 'b26v89c19zqg8o3fosbvicux7dhx1zjz2equtkkswrx4t'
+    m= main(s,"tweet1.csv",None,)
     n = "b26v89c19zqg8o3fosbv32ybwzja5jcmlpkklddih44n1"
-    main(s2,"tweet2.csv",n,)
+    main(s2,"tweet2.csv",m,)
+    # next_token
+    # nt = responce.json()["meta"]["next_token"]
+    # KeyError: 'next_token'
+    # type error occurs when the nt is static so we must return it as above in the method
 
     # how to synchronize a single resource between threads.
     # t1 = threading.Thread(target=main, args=(s,"tweet1.csv",None,), daemon=True)
