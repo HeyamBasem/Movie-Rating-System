@@ -75,17 +75,19 @@ def create_sentences(data):
 
 def main():
     # Get the data
-    data = pd.read_csv(r'Tweets.csv')
-    data = data[(data['stars'] == 1) | (data['stars'] == 5)]
-    data['Tweet'] = data['text']
+    data = pd.read_csv(r'/Users/hayoom/PycharmProjects/helloProgram/Tweets.csv')
+    # data = data[(data['stars'] == 1) | (data['stars'] == 5)]
+    # data['Tweet'] = data['text']
     print(data.head())
     print(data.info())
     print(data.describe())
 
-    data['len'].hist(bins=50)
+    # data['len'].hist(bins=50)
 
     data = clean_data(data)
     sentences = create_sentences(data)
+    data['len'].hist(bins=50)
+
     print(sentences[:5])
 
     w2v = Word2Vec(min_count=3,
